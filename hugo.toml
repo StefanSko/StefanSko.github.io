@@ -1,0 +1,26 @@
+# Switch baseURL to "https://stefansko.com/" once the domain is registered
+# and set as the custom domain in the GitHub Pages settings.
+baseURL = "https://stefansko.github.io/"
+locale = "en-us"
+title = "stefansko"
+theme = "hugo-bearblog"
+
+# Generate a nice robots.txt for SEO
+enableRobotsTXT = true
+
+[params]
+  author = "stefansko"
+  description = "Essays by stefansko"
+
+[services]
+  [services.rss]
+    # Full archive in the feed; essays are infrequent
+    limit = -1
+
+[markup]
+  [markup.highlight]
+    style = "friendly"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Allow raw HTML in markdown (footnote tweaks, small figures)
+      unsafe = true
