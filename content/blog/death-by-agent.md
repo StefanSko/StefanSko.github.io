@@ -1,6 +1,7 @@
 ---
 title: "Death by Agent"
 date: 2026-10-25
+description: "Math has fixed propositions to prove against. Great for agents! What about our code?"
 ---
 
 Math is being run over by AI. Barely a week goes by without any major publication of an LLM having solved some century-old mathematical puzzle.
