@@ -12,6 +12,9 @@ enableRobotsTXT = true
   author = "stefansko"
   description = "Essays by stefansko"
 
+[permalinks]
+  blog = "/blog/:year/:month/:slug/"
+
 [services]
   [services.rss]
     # Full archive in the feed; essays are infrequent
@@ -20,6 +23,8 @@ enableRobotsTXT = true
 [markup]
   [markup.highlight]
     style = "friendly"
+    # Colours come from layouts/partials/custom_head.html (light + dark variants)
+    noClasses = false
   [markup.goldmark]
     [markup.goldmark.renderer]
       # Allow raw HTML in markdown (footnote tweaks, small figures)
