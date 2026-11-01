@@ -35,8 +35,8 @@ This is based on a proven direct correspondence between math and programming. Th
 - proofs correspond to programs
 - simplifying a proof corresponds to evaluating a program
 
-But, it is a correspondence between logic and... yeah: Lambda Calculus (not just that but a typed version, because types are actually logical propositions..., well, ok?). That is clearly academic territory. You can go along in your programming career just fine without ever getting in touch with those concepts. 
-Not without surprise, the purest version of this you'll find at the core of such languages like Lean that as we have seen turn out to be great for proving mathematical theorems in our new agentic age. The types in those languages enforce much stronger promises, helping to actually DO let the LLM hill-climb to an eventual proof.
+But, it is a correspondence between logic and... yeah: Lambda Calculus (not just that but a typed version, because types are actually logical propositions..., well, ok?). That is clearly academic territory. You can go along in your programming career just fine without ever getting in touch with those concepts.
+Mathematicians, however, live in exactly that realm now. The proofs behind many of those recent breakthroughs are written in Lean, a language built directly on this correspondence. The types in such languages enforce much stronger promises, helping to actually DO let the LLM hill-climb to an eventual proof.
 
 But that's not usually what *our* programs provide!
 
@@ -131,7 +131,7 @@ Fast forward: People relied...! It got noticed, got discussed, and got turned in
 This is zooming in on a broader and philosophical question that Peter Naur asks in his paper "Programming as Theory Building"[^naur] from 1985: can the act of programming be characterized by just typing out the text that corresponds to the source code? 
 Naur emphatically argues against that! He is quite explicit and visual by referring to programs lacking an underlying theory held by the programmers of how the code relates to the real world problem it intends to solve as: *dead*. For a library holding our Priority Queue that also implies knowing about your clients in the real world.
 
-The state of events I described of multiple devs jumping in, changing around those implementation details, and potentially breaking `top3(...)` downstream would have signalled something to our dev team. It would have revealed a gap in knowledge about how this method is supposed to relate to the real world where it is actually used. 3 people held three different ideas; 3 distinct theories.
+The state of events I described of multiple devs jumping in, changing around those implementation details, and potentially breaking `top3(...)` downstream would have signalled something to our dev team. It would have revealed a gap in knowledge about how this method is supposed to relate to the real world where it is actually used. Three people, three theories.
 
 Optimally, as a result, all of those devs would have gathered to build up a common understanding on which invariant would make most sense. To do this in a sensible way, there would have to be some notion of where this existing method is used. Who relies on which invariant and why? They would have documented it. Now, such a problem could have been marked as avoidable in the future. 
 
@@ -172,9 +172,9 @@ We are still missing all programs the agents could have written but did not... a
 
 The questions from before: the test that never failed, the ugly piece of code, the cleanly designed but non-critical module? An agent has no one to resolve those questions with, yet does so anyway: Imputing from all the code the model saw during training!
 
-If theory cannot be encoded in written artifacts, then each change of session / model iteration / thinking levels is akin to a Handover from Team A to Team B. The very situation that Naur defined as the death of a program. In fact even within a session we have no real grasp whether internally the agents ever form any theory about the program it writes. Or whether a continuation might treat a previous promise fitting a certain theory as incidental and change it around on a whim (or vice versa).
+If theory cannot be encoded in written artifacts, then each change of session / model iteration / thinking levels is akin to a Handover from Team A to Team B. The very situation that Naur defined as the death of a program. In fact even within a session we have no real grasp whether internally the agents ever form any theory about the program they write. Or whether a continuation might treat a previous promise fitting a certain theory as incidental and change it around on a whim (or vice versa).
 
-Another parallel development: speed vs quantity. In our priority queue saga we have one fatal edit at human speed. A long running agent can have numerous locally defensible edits to the code within one afternoon! That is a whole different blast radius.
+Another parallel development: speed and volume. In our priority queue saga we have one fatal edit at human speed. A long running agent can have numerous locally defensible edits to the code within one afternoon! That is a whole different blast radius.
 
 Some evidence:
 The SlopCodeBench authors measure how code quality develops over time in code bases authored by agents. They report:
@@ -188,7 +188,7 @@ A thousand little deaths of our programs! Every time we let them go loose. Prett
 
 Now after all this: Is Coding really solved?
 We have breakthroughs in math by letting agents go after fixed logical propositions.
-Whether `items()` should be sorted is a proposition no one wrote down, though. It depends on who uses `top3()` and why. It can change over time. An innocent looking implementation detail leaking out into the real world through all carefully crafted abstraction details. So "stop looking at the code" might not be the end game. Because of the languages we use; because of the world we live in. Even though everything might get transformed in this day and age: we gonna need to stay creative (I am sure a similar argument can be made for math!). That's good news!
+Whether `items()` should be sorted is a proposition no one wrote down, though. It depends on who uses `top3()` and why. It can change over time. An innocent looking implementation detail leaking out into the real world through all carefully crafted abstraction layers. So "stop looking at the code" might not be the end game. Because of the languages we use; because of the world we live in. Even though everything might get transformed in this day and age: we gonna need to stay creative (I am sure a similar argument can be made for math!). That's good news!
 
 [^naur]: Peter Naur, [“Programming as Theory Building”](https://doi.org/10.1016/0165-6074(85)90032-8), *Microprocessing and Microprogramming* 15 (1985), pp. 253–261.
 
